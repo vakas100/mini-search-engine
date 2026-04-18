@@ -1,26 +1,34 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 import uvicorn
+from pydantic import BaseModel
 from typing import List
-from main import load_files
-from main import preprocess
-from main import inverted_index
-from main import user_query
-from main import lookup
-from main import calculate_tfidf
-from main import get_result
+from main import load_files, preprocess, inverted_index, user_query, lookup, calculate_tfidf, get_result
 
 app = FastAPI()
 
-@app.get('/')
+class SearchResult(BaseModel):
+    rank: int
+    filename: str
+    score: float
+    snippet: str
+
+
+data = load_files()
+processed_data = preprocess(data)
+inverted_dict = inverted_index(processed_data)
+
+@app.get('/',response_model=List[SearchResult])
 def search(query: str):
-    data = load_files()
-    processed_data = preprocess(data)
-    inverted_dict = inverted_index(processed_data)
+    if not query.strip():
+        raise HTTPException(status_code=400, detail="Query cannot be empty")
 
     query_processed = user_query(query)
     result = lookup(query_processed, inverted_dict)
-    rankings = calculate_tfidf(query_processed, result, processed_data)
 
+    if not result:
+        return []
+
+    rankings = calculate_tfidf(query_processed, result, processed_data)
     output = get_result(rankings,data)
 
     return output

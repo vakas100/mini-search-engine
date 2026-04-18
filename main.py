@@ -42,7 +42,7 @@ def inverted_index(files: dict):
 
     return inverted_dict
 
-def user_query(query):
+def user_query(query: str):
 
     stopword = {"is", "the", "and", "of", "to", "in", "a", "are", "was",
                 "were", "had", "have", "am"}
@@ -95,12 +95,15 @@ def calculate_tfidf(query: list, matched_docs: dict, docs: dict):
 def get_result(rankings,data):
     outputs = []
     for i,(filename, score) in enumerate(rankings[:5]):
-        snippet = "".join(data[filename][:35])
-        output = f"{i+1}. {filename}: (score: {round(score, 4)})\n"
-        output += f"\t{snippet}...\n"
-        outputs.append(output)
+        # snippet = "".join(data[filename][:35])
+        outputs.append({
+            'rank': i+1,
+            'filename': filename,
+            'score': round(score,4),
+            'snippet': data[filename][:200]
+        })
+    return outputs
 
-    return "\n".join(outputs)
 
 
 if __name__ == "__main__":
