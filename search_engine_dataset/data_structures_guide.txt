@@ -1,0 +1,1 @@
+Data structures are ways of organizing and storing data in a computer. Common structures include arrays, linked lists, stacks, queues, trees, and graphs. Choosing the right structure improves efficiency and performance. Arrays offer fast index access while linked lists allow easy insertion and deletion. Trees and graphs are used for hierarchical and relational data respectively.

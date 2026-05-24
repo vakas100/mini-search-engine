@@ -1,0 +1,1 @@
+List comprehensions in Python provide a concise way to create lists. They consist of an expression followed by a for clause inside square brackets. Optional conditions can filter items from the source. For example, squares = [x**2 for x in range(10)] creates a list of squares. List comprehensions are faster and more readable than traditional loops for simple operations.

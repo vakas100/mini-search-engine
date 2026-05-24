@@ -1,0 +1,1 @@
+Computer networking involves connecting multiple devices to share resources and data. A network can be wired or wireless and can span local areas or the entire globe. Key concepts include IP addresses, routers, switches, and protocols like TCP/IP. The OSI model has seven layers describing how data is transmitted. Networking is the backbone of the modern internet.

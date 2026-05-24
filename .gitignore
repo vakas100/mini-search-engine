@@ -1,4 +1,4 @@
-search_engine_dataset
-
 __pycache__/
-*.pyc
+*.py
+
+frontend.py

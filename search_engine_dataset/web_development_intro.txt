@@ -1,0 +1,1 @@
+Web development involves building and maintaining websites and web applications. It is divided into front-end and back-end development. Front-end deals with what users see using HTML, CSS, and JavaScript. Back-end handles servers, databases, and application logic. Full-stack developers work on both sides. Popular frameworks include React, Django, Node.js, and Flask.
