@@ -278,7 +278,7 @@
     status.innerHTML = '<span class="spinner"></span> searching...';
 
     try {
-      const res = await fetch(`${API}/Search?query=${encodeURIComponent(q)}`);
+      const res = await fetch(`${API}/?query=${encodeURIComponent(q)}`);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
 
