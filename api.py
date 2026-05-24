@@ -1,10 +1,18 @@
 from fastapi import FastAPI, HTTPException
 import uvicorn
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware 
 from typing import List
 from main import load_files, preprocess, inverted_index, user_query, lookup, calculate_tfidf, get_result
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class SearchResult(BaseModel):
     rank: int
