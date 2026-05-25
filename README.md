@@ -1,4 +1,3 @@
-# mini-search-engine
 # Mini Search Engine
 
 A full-stack search engine that indexes text documents and returns ranked results using the TF-IDF algorithm. Built with a FastAPI backend and a live UI hosted on GitHub Pages.
