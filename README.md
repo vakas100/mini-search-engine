@@ -3,7 +3,8 @@
 
 A full-stack search engine that indexes text documents and returns ranked results using the TF-IDF algorithm. Built with a FastAPI backend and a live UI hosted on GitHub Pages.
 
-**Live Demo:** https://vakas100.github.io/mini-search-engine/  
+**Live Demo:** https://vakas100.github.io/mini-search-engine/ 
+**NOTE** First request might take some time to start the backend
 **Backend API:** Deployed on Render
 
 ---
