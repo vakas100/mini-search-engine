@@ -6,7 +6,8 @@ A full-stack search engine that indexes text documents and returns ranked result
 **Live Demo:** https://vakas100.github.io/mini-search-engine/ 
 **Backend API:** Deployed on Render
 
-**NOTE** First request might take some time to start the backend
+**NOTE**: First request might take some time to start the backend
+
 ---
 
 ## Features
