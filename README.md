@@ -44,6 +44,7 @@ A full-stack search engine that indexes text documents and returns ranked result
 
 ```
 mini-search-engine/
+├──search_engine_dataset   # Contains txt documents
 ├── main.py                # TF-IDF indexing and search logic
 ├── api.py                 # FastAPI routes and endpoints
 ├── dataset_creator.py     # Script to generate text documents for indexing
